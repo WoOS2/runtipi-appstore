@@ -2,7 +2,7 @@ version: "3.7"
 services:
   photoprism:
     # TODO: Special image for arm/v7 is available
-    image: photoprism/photoprism:240420
+    image: photoprism/photoprism:240915
     container_name: photoprism
     depends_on:
       - photoprism-db
@@ -11,13 +11,17 @@ services:
       - "${APP_PORT}:2342"
     environment:
       PHOTOPRISM_ADMIN_PASSWORD: ${PHOTOPRISM_ADMIN_PASSWORD}
+      PHOTOPRISM_AUTH_MODE: "password"
       PHOTOPRISM_SITE_URL: "${APP_PROTOCOL:-http}://${APP_DOMAIN}/"
       PHOTOPRISM_ORIGINALS_LIMIT: 5000
       PHOTOPRISM_HTTP_COMPRESSION: "gzip"
       PHOTOPRISM_LOG_LEVEL: "info"
+      PHOTOPRISM_DEBUG: "false"
       PHOTOPRISM_PUBLIC: "false"
       PHOTOPRISM_READONLY: "false"
       PHOTOPRISM_EXPERIMENTAL: "false"
+      PHOTOPRISM_BACKUP_DATABASE: "false"
+      PHOTOPRISM_BACKUP_ALBUMS: "false"
       PHOTOPRISM_DISABLE_CHOWN: "false"
       PHOTOPRISM_DISABLE_WEBDAV: "false"
       PHOTOPRISM_DISABLE_SETTINGS: "false"
