@@ -30,6 +30,15 @@
       "type": "random",
       "label": "Photoprism root DB password",
       "env_variable": "DB_ROOT_PASSWORD"
+    },
+    {
+      "type": "text",
+      "label": "Path to Photos",
+      "env_variable": "TOP_IMAGE_DIR",
+      "placeholder": "${ROOT_FOLDER_HOST}/media/data/images",
+      "default": "${ROOT_FOLDER_HOST}/media/data/images",
+      "hint": "The full path to the top image directory",
+      "required": "true"
     }
   ],
   "supported_architectures": ["arm64", "amd64"],
