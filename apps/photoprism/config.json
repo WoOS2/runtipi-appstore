@@ -35,10 +35,10 @@
       "type": "text",
       "label": "Path to Photos",
       "env_variable": "TOP_IMAGE_DIR",
-      "placeholder": "/media/data/images",
-      "default": "/media/data/images",
-      "hint": "The full path to the top image directory",
-      "required": "true"
+      "placeholder": "/path/to/images",
+      "default": "",
+      "hint": "Leave empty to get <runtipi-dir>/media/data/images",
+      "required": false
     }
   ],
   "supported_architectures": ["arm64", "amd64"],
