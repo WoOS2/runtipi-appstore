@@ -35,8 +35,8 @@
       "type": "text",
       "label": "Path to Photos",
       "env_variable": "TOP_IMAGE_DIR",
-      "placeholder": "${ROOT_FOLDER_HOST}/media/data/images",
-      "default": "${ROOT_FOLDER_HOST}/media/data/images",
+      "placeholder": "/media/data/images",
+      "default": "/media/data/images",
       "hint": "The full path to the top image directory",
       "required": "true"
     }
